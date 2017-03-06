@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.action.extension" value="action" />
+	<constant name="struts.serve.static.browserCache" value="false" />
+
+	<package name="s2sh" namespace="/user" extends="struts-default">
+		<action name="login" method="login" class="com.bufoon.action.LoginAction">
+		</action>
+		<action name="register" method="register"
+			class="com.bufoon.action.RegisterAction">
+		</action>
+		<action name="recordscord" method="recordscord"
+			class="com.bufoon.action.RecordScoreAction">
+		</action>
+		<action name="examstart" method="examstart"
+			class="com.bufoon.action.ExamStartAction">
+		</action>
+		<action name="exam" method="exam" class="com.bufoon.action.ExamAction">
+			<result name="success">/exam.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		<action name="subject" method="subject" class="com.bufoon.action.TestAction"></action>
+		<action name="top" method="top" class="com.bufoon.action.TopAction"></action>
+		<action name="isregister" method="isregister" class="com.bufoon.action.RegisterAction"></action>
+	</package>
+
+
+
+
+</struts> 
